@@ -10,18 +10,18 @@ The project's Github page can be found here: https://github.com/adikele/covid-ca
 It is, however, not updated since December 2022.
 
 CURRENT PROJECT: The original project is now redone using Django.
-The goal of the current project is to compare the software development of a program in Flask and in Django.
+The goal of the current project is to compare the software development of a program in Flask and in Django.<br/>
 The current project uses the following libraries: (i) Matplotlib 3.3.0 (ii) Pandas 1.1.0 (iii) Django 3.2.9
 
 Users can plot two types of graphs. These are:<br/>
-(i) Bargraphs of one user-entered country and four other countries from the same continent.
+(i) Bargraphs of one user-entered country and four other countries from the same continent.<br/>
 (ii) Linegraphs of infections in three user-entered countries over a period of time. 
 
 ![An example of a linegraph plot using the 'Spread of Infections in Countries' link](https://github.com/adikele/covidplots-using-django/blob/master/SweChiIndia.png)
 
 ### Structure:
 The backend is a RESTful API application built with Django.
-The data source is a csv file dated 6th December 2020 taken from EU Open Data Portal: https://data.europa.eu/euodp/en/data/dataset/covid-19-coronavirus-data 
+The data source is a csv file dated 6th December 2020 taken from the EU Open Data Portal: https://data.europa.eu/euodp/en/data/dataset/covid-19-coronavirus-data 
 The csv file is converted into a dataframe in Pandas, from which the required data, based on user inputs, is extracted. 
 This date is then ploted as graphs by using Matplotlib functions.
 
