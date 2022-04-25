@@ -30,6 +30,13 @@ import pandas as pd
 def index(request):
     return render(request, "index.html")
 
+
+def api_info(request):
+    return render(request, "covidplots/api_info.html")
+
+def valstreetdesign(request):
+    return render(request, "covidplots/valstreetdesign.html")
+
 '''
 in flask:
 def index():

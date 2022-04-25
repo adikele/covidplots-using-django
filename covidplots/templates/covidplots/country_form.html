@@ -1,5 +1,13 @@
-<form action="" method="post">
+{% extends 'base.html' %}
+{% block content %}
+<br> 
+<br> 
+<h5>   Country bargraphs      </h5>
+<p >  Bargraphs of Covid-19 infections on a specific day of one user-entered country and four other random countries from the same continent       </p>
+<br> 
+    <form action="" method="post">
     {% csrf_token %}
     {{ form }}
     <input type="submit" value="Submit">
-</form>
+    </form>
+{% endblock %}
