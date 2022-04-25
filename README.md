@@ -13,7 +13,9 @@ CURRENT PROJECT: The original project is now redone using Django.
 The goal of the current project is to compare the software development of a program in Flask and in Django.
 The current project uses the following libraries: (i) Matplotlib 3.3.0 (ii) Pandas 1.1.0 (iii) Django 3.2.9
 
-Users can plot two types of graphs. These are:  (i) Bargraphs of one user-entered country and four other countries from the same continent.  (ii) Linegraphs of infections in three user-entered countries over a period of time. 
+Users can plot two types of graphs. These are:<br/>
+(i) Bargraphs of one user-entered country and four other countries from the same continent.
+(ii) Linegraphs of infections in three user-entered countries over a period of time. 
 
 ![An example of a linegraph plot using the 'Spread of Infections in Countries' link](https://myoctocat.com/assets/images/base-octocat.svg)
 
