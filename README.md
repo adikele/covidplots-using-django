@@ -1,25 +1,25 @@
 # covidplots-using-django
-Web program displays bargraphs and linegraphs showing Covid-19 infection rates in different countries
+Web program displays bargraphs and linegraphs showing Covid-19 infection rates in different countries.
+The project website can be found at: https://covid-19-vis2.lm.r.appspot.com/covidplots/
 
-# Visualization of Covid-19 infections
-
-ORIGINAL PROJECT: This project was originally done in July - Dec 2020 using Flask. The purpose then was to develop software to visualize Covid-19 infection rates. 
+## Visualization of Covid-19 infections:
+ORIGINAL PROJECT: This project was originally done in July - Dec 2020 using Flask. 
+The purpose then was to develop software to visualize Covid-19 infection rates. 
 Potential users were to be academicians, researchers and journalists. 
-The project is therefore out of data.
+The project's Github page can be found here: https://github.com/adikele/covid-cases-webapp 
+It is, however, not updated since December 2022.
 
 CURRENT PROJECT: The original project is now redone using Django.
 The goal of the current project is to compare the software development of a program in Flask and in Django.
-The project uses the following libraries: (i) Matplotlib 3.3.0 (ii) Pandas 1.1.0 (iii) Django 3.9
+The current project uses the following libraries: (i) Matplotlib 3.3.0 (ii) Pandas 1.1.0 (iii) Django 3.2.9
 
-The project website can be found at: https://covid-19-vis2.lm.r.appspot.com/covidplots/
-
-Currently website users can plot graphs for: 
+Users can plot two types of graphs. These are: 
 (i) Bargraphs of one user-entered country and four other countries from the same continent. 
 (ii) Linegraphs of infections in three user-entered countries over a period of time. 
 
 ### Structure:
 The backend is a RESTful API application built with Django.
-The data source is a csv file dated 6th December 2020 take from EU Open Data Portal: https://data.europa.eu/euodp/en/data/dataset/covid-19-coronavirus-data 
+The data source is a csv file dated 6th December 2020 taken from EU Open Data Portal: https://data.europa.eu/euodp/en/data/dataset/covid-19-coronavirus-data 
 The csv file is converted into a dataframe in Pandas, from which the required data, based on user inputs, is extracted. 
 This date is then ploted as graphs by using Matplotlib functions.
 
@@ -35,28 +35,11 @@ mkdir covid-project && cd covid-project
 python3 -m venv covid-venv
 source covid-venv/bin/activate
 git clone https://github.com/adikele/covidplots-using-django
-cd covid-cases-webapp
+cd covid-using-django
 pip install -r requirements.txt
 python manage.py runserver
 ```
 
-
-
-### Usage
-
-EXTRA
-
-Docker image: https://hub.docker.com/repository/docker/adikele/covid3
-
-TO DO TASKS:
-
-Rewrite program to extend time period beyond December 2020. (Current program creates a website that shows Covid data until 6th December 2020. The format of the data hosted by EU Open Portal was changed in December 2020.)
-Provide user the option to input a time period for which line graphs should be drawn.
-
-
-financial-dashboard
-$ cd financial-dashboard/
-$ ls 
-README.md		backend			docker-compose.yml
-$ docker-compose up
-```
+### To Do: 
+1. Create a dockerized container for the project
+2. Create a frontend using React
