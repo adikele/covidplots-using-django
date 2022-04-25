@@ -2,20 +2,16 @@ import io
 import random
 import pandas as pd
 
-#from flask import Flask, request, render_template, Response, jsonify
-from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
-from matplotlib.figure import Figure
-
 DATA_FILE = "EUOpenData_06_12_2020"
 DATA_DATE = "06/12/2020"
 NEXT_UPDATE_DATE = "13/12/2020"
 NUMBER_OF_DAYS = 240
 global x, y
 
-#new to Django-covid
+
 def list_all_countries():
     """
-    Function returns a list of all countries 
+    Function returns a list of all countries
     """
     df = pd.read_csv(DATA_FILE)
     dict_all_countries = fetch_all_countries(df)
@@ -24,7 +20,7 @@ def list_all_countries():
         for j in i:
             list_all_countries.append(j)
     list_all_countries_sorted = sorted(list_all_countries)
-    return (list_all_countries_sorted)
+    return list_all_countries_sorted
 
 
 def read_input():
@@ -33,6 +29,7 @@ def read_input():
     return country
 
 
+# this function is not used
 def input_validataion(name_country, dict_all_countries):
     """
     Function takes name_country, a string.
@@ -50,7 +47,7 @@ def fetch_all_countries(df):
     Function finds the list of countries from all the continents
     It takes a dataframe of the input data file
     Returns a dict with keys --> continents
-                      values --> list of countries in the respective continents  
+                      values --> list of countries in the respective continents
     """
     continents = ("Africa", "Europe", "America", "Oceania", "Asia")
     dict_all_countries = dict()
@@ -94,11 +91,11 @@ def fetch_home_continent_data(df, country_sel):
 
 
 def random_countries(list_countries, country_sel):
-    """  
+    """
     Function selects 4 random countries, none of which are to be the user-selected country
     It takes (i) a list of countries
     (ii) a string, country_sel
-    Returns a list of 4 random countries 
+    Returns a list of 4 random countries
     """
     list_countries_random = random.sample(list_countries, 4)
     if country_sel in list_countries_random:
@@ -113,8 +110,8 @@ def fetch_five_countries_data(dict_countries_cases, country_sel, list_countries_
     """
     Function creates a dict of countries and cases for 5 countries
     It takes (i) a dict of countries and cases (ii) a string, country_sel
-    (iii) a list of 4 random countries 
-    Returns a dict of countries and cases for 5 countries 
+    (iii) a list of 4 random countries
+    Returns a dict of countries and cases for 5 countries
     """
     dict_fivecountries = dict()
     dict_fivecountries[country_sel] = dict_countries_cases[country_sel]
@@ -124,39 +121,6 @@ def fetch_five_countries_data(dict_countries_cases, country_sel, list_countries_
 
     return dict_fivecountries
 
-
-# plotting countries and cases:
-def create_figure(countries, cases):
-    fig = Figure()
-    axis = fig.add_subplot(1, 1, 1)
-    axis.bar(countries, cases, color="blue")
-    axis.set_ylabel("Persons infected in last 14 days (source: EU Open Data)")
-    axis.set_title(
-        f"Cumulative number (14 days) of COVID-19 cases per 100000 persons \n Data updated on: {DATA_DATE}  Next update: {NEXT_UPDATE_DATE}"
-    )
-    return fig
-
-#####
-#####  LINEGRAPHS:
-#####
-
-# NOTE: processing functions for linegraphs start from here..
-# plotting countries and cases over time:
-def create_figure_linegraphs(newlistdate_list, dict_three_countries):
-    fig = Figure()
-    axis = fig.add_subplot(1, 1, 1)
-    for i in dict_three_countries.keys():
-        axis.plot(newlistdate_list, dict_three_countries[i], label=i)
-    axis.set_xticks(
-        ["15/04/2020", "15/05/2020", "15/06/2020", "15/07/2020", "15/08/2020", "15/09/2020", "15/10/2020", "15/11/2020"]
-    )
-    z = ["mid-April", "mid-May", "mid-June", "mid-July", "mid-Aug", "mid-Sept", "mid-Oct", "mid-Nov"]
-    axis.set_xticklabels(z)
-    axis.set_ylabel("Cumulative number of new virus infections per 100000 inhabitants")
-    axis.set_xlabel("Year 2020 (last update: 6th Dec 2020)")  
-    axis.set_title("Covid-19 infections - Country Graphs (source: EU Open Data)")
-    axis.legend(loc="best")
-    return fig
 
 def creating_date_list(df, n):
     df1 = df[df["countriesAndTerritories"] == "Afghanistan"]
@@ -170,10 +134,10 @@ def creating_date_list(df, n):
 def fetch_all_continent_data(df):
     """
     Function finds the countries and cases for all continents
-    It takes a dataframe of the input data file 
-    Returns two things: 
-    (i) a list of countries 
-    (ii) a dict with keys --> countries 
+    It takes a dataframe of the input data file
+    Returns two things:
+    (i) a list of countries
+    (ii) a dict with keys --> countries
                    values --> list of cases for each of the days recorded since Dec 2019
     """
     # extracting the countries from all continents:
