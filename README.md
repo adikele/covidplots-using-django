@@ -29,7 +29,7 @@ On Linux and Mac: Download this project from Github and run it like any other Dj
 
 Step 1 : Install Python 3.7+
 
-Step 2 : In your Terminal, first cd into the directory you would like to store this project. Then type the following commands one after another in your Terminal:
+Step 2 : In a terminal, first cd into the directory you would like to store this project. Then type the following commands one after:
 ```bash
 mkdir covid-project && cd covid-project
 python3 -m venv covid-venv
@@ -43,3 +43,4 @@ python manage.py runserver
 ### To Do: 
 1. Create a dockerized container for the project
 2. Create a frontend using React
+3. Store results using a cloud service
