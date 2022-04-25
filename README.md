@@ -35,7 +35,7 @@ mkdir covid-project && cd covid-project
 python3 -m venv covid-venv
 source covid-venv/bin/activate
 git clone https://github.com/adikele/covidplots-using-django
-cd covid-using-django
+cd covidplots-using-django
 pip install -r requirements.txt
 python manage.py runserver
 ```
