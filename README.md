@@ -17,6 +17,7 @@ Users can plot two types of graphs. These are:<br/>
 (i) Bargraphs of one user-entered country and four other countries from the same continent.<br/>
 (ii) Linegraphs of infections in three user-entered countries over a period of time. 
 
+An example of a linegraph plot using the 'Spread of Infections in Countries' link:
 ![An example of a linegraph plot using the 'Spread of Infections in Countries' link](https://github.com/adikele/covidplots-using-django/blob/master/SweChiIndia.png)
 
 ### Structure:
@@ -27,7 +28,7 @@ This date is then ploted as graphs by using Matplotlib functions.
 
 
 ### Running this project:
-On Linux and Mac: Download this project from Github and run it like any other Django Python project. Here are the steps to download and run the project:
+On Linux and Mac: Download this project from Github and run it like any other Django Python project. 
 
 Step 1 : Install Python 3.7+
 
