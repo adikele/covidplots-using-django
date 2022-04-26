@@ -7,7 +7,7 @@ ORIGINAL PROJECT: This project was originally done in July - Dec 2020 using Flas
 The purpose then was to develop software to visualize Covid-19 infection rates. 
 Potential users were to be academicians, researchers and journalists. 
 The project's Github page can be found here: https://github.com/adikele/covid-cases-webapp 
-It is, however, not updated since December 2022.
+It is, however, not updated since December 2020.
 
 CURRENT PROJECT: The original project is now redone using Django.
 The goal of the current project is to compare the software development of a program in Flask and in Django.<br/>
