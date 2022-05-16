@@ -23,8 +23,8 @@ An example of a linegraph plot using the 'Spread of Infections in Countries' lin
 ### Structure:
 The backend is a RESTful API application built with Django.
 The data source is a csv file dated 6th December 2020 taken from the EU Open Data Portal: https://data.europa.eu/euodp/en/data/dataset/covid-19-coronavirus-data 
-The csv file is converted into a dataframe in Pandas, from which the required data, based on user inputs, is extracted. 
-This date is then ploted as graphs by using Matplotlib functions.
+The csv file is converted into a dataframe in Pandas, from which needed data, based on user inputs, is extracted. 
+This data is then ploted as graphs by using the Matplotlib library.
 
 
 ### Running this project:
